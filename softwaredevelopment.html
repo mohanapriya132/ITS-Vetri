@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+     <!-- <script src="script.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    
+</head>
+<body>
+    <nav class="flex items-center text-center justify-between p-1 m-1 sticky top-0 z-30 bg-white w-full pl-10 pr-10">
+        <div>
+           <a href="index.html"> <img src="images/logo.webp" alt="logo" class="w-40 h-20"></a>
+        </div>
+        <div class=" navbar flex gap-10 text-gray-600 font-medium">
+            <!-- <a href="#"><i class="fa-solid fa-house-chimney"></i>HOME</a> -->
+            <a href="#"><i class="fa-solid fa-circle-question"></i>PRICING</a>
+                  <!-- OUR PROJECTS with Multi-Level Dropdown -->
+          <div class="relative">
+            <a href="#" onclick="toggleDropdown('projectDropdown')" class="flex items-center gap-2">
+              <i class="fa-solid fa-list-check"></i> OUR PROJECTS
+            </a>
+            
+            <!-- First Level Dropdown for "OUR PROJECTS" -->
+            <div id="projectDropdown" class="hidden absolute bg-white text-gray-600 mt-2 p-2 rounded shadow-lg w-48">
+              <a href="#" onclick="toggleDropdown('productDropdown')" class="block px-4 py-2 hover:bg-gray-100"><i class="fa-brands fa-product-hunt mr-2"></i>Product</a>
+              <a href="#" onclick="toggleDropdown('digitalServiceDropdown')" class="block px-4 py-2 hover:bg-gray-100"><i class="fa-brands fa-digital-ocean mr-1"></i>Digital Service</a>
+            </div>
+          </div> 
+             <a href="#"><i class="fa-solid fa-people-group"></i>REVIEWS</a>
+            <a href="#"><i class="fa-regular fa-address-card"></i>CONTACT US</a>
+        </div>
+        <div>
+            <button class=" bg-yellow-400 p-2 m-2 pl-4 pr-4 rounded-sm"><i class="fa-solid fa-phone"></i>+91-8438558527</button>
+        </div>
+       </nav>
+       <div>
+    </div>
+    
+       <!-- <div >
+        <img src="./images/Web-Design-Devlopment.jpg" alt="banner" class="w-full" style="height: 26rem; object-fit:cover;" class="md:h-full md:w-28">
+       </div> -->
+       <div class="relative">
+        <img src="images/software.webp" alt="banner" class="w-full" style="height: 26rem; object-fit:cover;">
+    
+        <!-- Sub-dropdown for Product -->
+        <div id="productDropdown" class="hidden absolute bg-white text-gray-600 -mt-[6rem] left-1/2 transform translate-x-10 top-1/4 p-2 rounded shadow-lg w-64">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-file-invoice mr-2"></i>Vetri Invoice</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-file mr-2"></i>Vetri Payslip</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-pepper-hot mr-2"></i>Vetri Fresh</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-comment-sms mr-2"></i>Vetri SMS</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-money-check mr-2"></i>Vetri EMS</a>
+        </div>
+    
+        <!-- Sub-dropdown for Digital Service -->
+        <div id="digitalServiceDropdown" class="hidden absolute bg-white text-gray-600 -mt-[6rem] left-1/2 transform translate-x-10 top-1/4 p-2 rounded shadow-lg w-64">
+          <a href="webdevelopment.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-earth-americas mr-2"></i>Web Development</a>
+          <a href="softwaredevelopment.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-code mr-2"></i>Software Development</a>
+          <a href="digitalmarketing.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-diagram-project mr-2"></i>Digital Marketing</a>
+          <a href="uiux.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-brands fa-uikit mr-2"></i>UI/UX Design</a>
+          <a href="softwaretesting.html" class="block px-4 py-2 hover:bg-gray-100 hover:text-[#359D21]"><i class="fa-solid fa-bug mr-2"></i>Software Testing</a>
+        </div>
+      </div>
+    
+    
+       <a href="tel:+1234567890" target="_blank" rel="noreferrer noopener" class="fixed bottom-24 right-4 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-500 animate-bounce ">
+        <!-- Flat Phone Icon -->
+        <div class="relative z-20">
+          <svg fill="#fff" height="24px" width="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.62 10.79a15.534 15.534 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.02-.24c1.12.38 2.33.59 3.59.59.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.27 21 3 14.73 3 7c0-.55.45-1 1-1h3.01c.55 0 1 .45 1 1 0 1.26.21 2.47.59 3.59.15.35.06.77-.25 1.02l-2.2 2.18z"/>
+          </svg>
+        </div>
+      </a>
+    
+      <a href="https://wa.me/+918438558527" target="_blank" rel="noreferrer noopener" class="fixed bottom-4 right-4 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-500 animate-bounce">
+        <!-- Flat WhatsApp Icon -->
+        <div class="relative z-20">
+          <svg fill="#fff" height="24px" width="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.04C6.48 2.04 2 6.52 2 12.04c0 2.26.79 4.33 2.11 5.97l-1.65 4.86 4.91-1.65c1.68 1.03 3.68 1.63 5.64 1.63 5.52 0 10-4.48 10-10.03C22 6.52 17.52 2.04 12 2.04zm1.73 13.17c-.83.43-1.53.25-2.24-.29-1.12-.83-2.27-1.25-3.49-1.38-2.7-.2-4.72-2.12-5.27-4.82-.31-1.56.33-3.22 1.5-4.16 1.47-1.16 3.68-1.16 5.19 0 1.09.55 2.11 1.42 3.04 2.47 1.5 1.61 2.55 3.6 2.55 5.88 0 1.22-.32 2.44-.93 3.53-1.02 1.55-2.44 2.24-4.03 2.22z"/>
+          </svg>
+        </div>
+      </a>
+      <section class="p-10 -mt-5">
+      <h1 class="text-center text-3xl font-bold p-1 m- 1 mt-5" style="color: #359D21;">Why do we need a website?</h1>
+      <p class="border border-gray-300 w-[60rem] ml-[8rem] mt-5"></p>
+      <div class="flex gap-10 mt-5">
+        <div>
+      <p class="mt-5">In this era of the Internet, digital marketing is everything to make your business flourish amidst the competition. We, the team of workers at Pepy Technologies, provide you with a wide range of exclusive digital marketing services for your business. Here, we take up the responsibility of growing your business online, marking its strong presence across all social media platforms by giving it a strategic shout-out.</p>
+      <p class="mt-5">Our team of experts carries out the most recognised SEO work, and our motto is to pull up your site in search engines organically. We also offer platform-specific SEO services, and a customised solution is guaranteed if you opt for our service.</p>
+      <p class="mt-5">Besides, our team is always updated with the latest social media marketing techniques to innovate ideas to promote your business campaign and other promotional plans. Are you ready to enhance your online presence further? Reach out to us right now for a consultation, and let's go together on a path to digital success!</p>
+    </div>
+    <div>
+        <img src="./images/digital.jpeg" style="width: 65rem; height: 22rem;" >
+    </div>
+</div>
+    </section>
+    <section >
+        <h1 class="text-center text-3xl font-bold p-1 m- 1 mt-5" style="color: #359D21;">Services We Provide</h1>
+        <p class="border border-gray-300 w-[60rem] ml-[8rem] mt-5"></p>
+        <div class="p-10">
+        <div class="flex gap-10">
+          
+            <div class="price_s1">
+                <img src="./images/online-data.png" alt="codingimg" style="height: 80px; width: 80px;">
+                <h1 style="background-color: #359D21;" class="p-1 font-bold text-white">Static Website</h1>
+                <p class="mt-10">Our dynamic UI developers will design an apt Static Web Design that suits your business perfectly. Opt our service for the best target audience reach.</p>
+            </div>
+          
+            <div class="price_s1">
+                <img src="./images/page-design.png" alt="codingimg" style="height: 80px; width: 80px;">
+                <h1 style="background-color: #359D21;" class="p-1 font-bold text-white">Dynamic Website</h1>
+                <p class="mt-10">We test multiple HTML & programming sets to create a customized and Dynamic Web look for your clients. Get our service for an amazing user experience.</p>
+            </div>
+            <div class="price_s1 ">
+                <img src="./images/shopping.png" alt="codingimg" style="height: 80px; width: 80px;">
+                <h1 style="background-color: #359D21;" class="p-1 font-bold text-white">Ecommerce Website</h1>
+                <p class="mt-10">We assure to make your business flourish with our solid E-commerce Web Designing right from simple to complex designing processes by a team of experts.</p>
+            </div>
+            </div>
+            <div class="flex gap-10 mt-10">
+          
+              <div class="price_s1">
+                  <img src="./images/add.png" alt="codingimg" style="height: 80px; width: 80px;">
+                  <h1 style="background-color: #359D21;" class="p-1 font-bold text-white">Wordpress Website</h1>
+                  <p class="mt-10">SEO experts will design your site for prompt functioning optimization and ranking terms. The strong backlinks will pull up the site in search engines.</p>
+              </div>
+            
+              <div class="price_s1">
+                  <img src="./images/app-development.png" alt="codingimg" style="height: 80px; width: 80px;">
+                  <h1 style="background-color: #359D21;" class="p-1 font-bold text-white">Website Redesigning</h1>
+                  <p class="mt-10">Old doesn't yield gold. The expert technicians provide a fresh look to your site by applying the latest Adword technics & increase the conversion rate.</p>
+              </div>
+              <div class="price_s1 ">
+                  <img src="./images/ui.png" alt="codingimg" style="height: 80px; width: 80px;">
+                  <h1 style="background-color: #359D21;" class="p-1 font-bold text-white">UI/UX Designing</h1>
+                  <p class="mt-10">A smooth UI will fuel your online marketing and presence. Book our service for a cost-effective UI/UX Designing and stand out among the competitors.</p>
+              </div>
+              </div>
+            </div>
+        </div>
+
+    </section>
+    <section>
+      <h1 class="text-center text-3xl font-bold p-1 m- 1 mt-5" style="color: #359D21;">Websites Portfolio</h1>
+      <p class="border border-gray-300 w-[60rem] ml-[8rem] mt-5"></p>
+
+    </section>
+
+      <div class="main-container">
+        <div class=" buttons flex gap-10 p-10 justify-center text-xl font-bold cursor-pointer "> 
+          
+          <button id="btn_diva">Static Website</button>
+          <button id="btn_divb">Dynamic Website</button>
+          <button id="btn_divc">Ecommerce Website</button>
+      </div>
+      <div class="blocks">
+      <div class="diva" id="diva">
+        <div class="flex gap-10 pl-10 pr-10">
+        <div class="" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <img src="./images/wemonproject.jpeg" style="width: 35rem;" >
+          <p class="text-center mt-10 text-2xl font-medium">women's accessories website</p>
+          <p class="text-center mt-3 text-gray-500">Static Website</p>
+         </div>
+         <div class="" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <img src="./images/wemonproject.jpeg" style="width: 35rem;" >
+          <p class="text-center mt-10 text-2xl font-medium">women's accessories website</p>
+          <p class="text-center mt-3 text-gray-500">Static Website</p>
+         </div>
+        </div>
+      </div>
+      <div class="divb" id="divb">
+        <div class="flex gap-10 pl-10 pr-10">
+          <div class="" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+            <img src="./images/udemyproject.jpeg" style="width: 35rem;" >
+            <p class="text-center mt-10 text-2xl font-medium">Udemy website</p>
+            <p class="text-center mt-3 text-gray-500">Dynamic Website</p>
+           </div>
+           <div class="" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+            <img src="./images/udemyproject.jpeg" style="width: 35rem;" >
+            <p class="text-center mt-10 text-2xl font-medium">Udemy website</p>
+            <p class="text-center mt-3 text-gray-500">Dynamic website</p>
+           </div>
+          </div>     
+         </div>
+      <div class="divc" id="divc">
+        <div class="flex gap-10 pl-10 pr-10">
+          <div class="" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+            <img src="./images/greendenproject.jpeg" style="width: 35rem;" >
+            <p class="text-center mt-10 text-2xl font-medium">Greenden website</p>
+            <p class="text-center mt-3 text-gray-500">E-commerce Website</p>
+           </div>
+           <div class="" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+            <img src="./images/greendenproject.jpeg" style="width: 35rem;" >
+            <p class="text-center mt-10 text-2xl font-medium">Greenden website</p>
+            <p class="text-center mt-3 text-gray-500">E-commerce Website</p>
+           </div>
+          </div>      
+        </div>
+    </div>
+
+<section>
+      <h1 class="text-center text-3xl font-bold p-1 m- 1 mt-5" style="color: #359D21;">We Are Expertise In</h1>
+      <p class="border border-gray-300 w-[60rem] ml-[8rem] mt-5"></p>
+
+      <div class=" p-10 flex justify-around">
+        <div>
+          <img src="./images/html-5.png" alt="codingimg" style="height: 80px; width: 80px;">
+        </div>
+        <div><i class="fa-brands fa-angular text-8xl text-red-600"></i></div>
+        <div>
+          <img src="./images/nodejs.webp" alt="codingimg" style="height: 80px; width: 80px;">
+        </div>
+        <div>
+        <img src="./images/4-react.webp" alt="codingimg" style="height: 80px; width: 80px;">
+      </div>
+      <div>
+        <img src="./images/php.webp" alt="codingimg" style="height: 80px; width: 80px;">
+      </div>
+      </div>
+      <div class="ml-10 mr-10 flex justify-around">
+        <div>
+          <img src="./images/6-mysql.webp" alt="codingimg" style="height: 80px; width: 80px;">
+        </div>
+        <div>
+          <img src="./images/7-mongodb.webp" alt="codingimg" style="height: 80px; width: 80px;">
+        </div>        
+        <div>
+          <img src="./images/8-wordPress.webp" alt="codingimg" style="height: 80px; width: 80px;">
+        </div>
+        <div>
+        <img src="./images/9-wix.webp" alt="codingimg" style="height: 80px; width: 80px;">
+      </div>
+      <div>
+        <img src="./images/10-shopify.webp" alt="codingimg" style="height: 80px; width: 100px;">
+      </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h1 class="text-center text-3xl font-bold p-1 m- 1 mt-5" style="color: #359D21;">Reasons For Choosing Us
+      </h1>
+      <p class="border border-gray-300 w-[60rem] ml-[8rem] mt-5"></p>
+
+<div class="flex gap-20 p-10">
+      <div class="w-[45rem]">
+        <div>
+        <h1 class="text-xl font-semibold">We Guide you from the backend</h1>
+        <p class="mt-3">We always believe that we can produce unbeatable solutions if we collaborate with experts. We are a startup company with the collaboration of multiple highly-established firms.</p>
+      </div>
+      <div class="mt-5">
+        <span class="flex items-center "> <img src="./images/man.png" class="w-10 h-10">Expert consulting to launch your idea</span>
+        <span class="flex items-center mt-4"> <img src="./images/big-bag-of-coins.png" class="w-10 h-10">Being a startup we know your pain points always happy to serve you the best</span>
+        <span class="flex items-center mt-3"> <img src="./images/game.png" class="w-10 h-10">We are selling our reputation and not a product to the customers</span>
+      </div>
+      <p class="mt-5">Our team is multi-talented and proficient in their skills. We are always keen on your investment and we will not let you down. We trust our customer growth is our growth. We support you like a friend and guide you like your father in your business.</p>
+      </div>
+      <div>
+        <div>
+          <h1 class="text-xl font-semibold">Get a Free Quote</h1>
+        </div>
+        <div>
+       
+        <div>
+        <div class="mt-10 flex gap-3">
+          <img src="./images/man.png" class="w-7 h-7"> 
+          <input placeholder="Name" class="border-none outline-none">
+        </div>
+        <p class="border border-gray-400 w-[20rem] mt-3"></p>
+      </div>
+      <div>
+        <div class="mt-5 flex gap-3">
+          <img src="./images/email.png" class="w-7 h-7"> 
+          <input placeholder="Email" class="border-none outline-none">
+        </div>
+        <p class="border border-gray-400 w-[20rem] mt-3"></p>
+      </div>
+      <div>
+        <div class="mt-5 flex gap-3">
+          <img src="./images/telephone.png" class="w-7 h-7"> 
+          <input placeholder="Name" class="border-none outline-none">
+        </div>
+        <p class="border border-gray-400 w-[20rem] mt-3"></p>
+      </div>
+      <div>
+        <div class="mt-5 flex gap-3">
+          <img src="./images/speech-bubble.png" class="w-7 h-7"> 
+          <input placeholder="Name" class="border-none outline-none">
+        </div>
+        <p class="border border-gray-400 w-[20rem] mt-3"></p>
+      </div>
+      
+            <button class="bg-yellow-500 font-bold p-1 mt-10 w-[20rem] justify-center">Get a Quote</button>
+      </div>
+    </div>
+    </section>
+
+    <footer>
+      <div class="flex gap-10 justify-between bg-[#172337] p-5 text-white" >
+        <div>
+          <h1 style="color: #359D21;"class="text-2xl font-bold">Vetri IT System</h1>
+          <a class="mt-5">+91-8438558527</a><br>
+          <a>abc@gmail.com</a>
+        </div>
+        <div>
+          <h1 style="color: #359D21;" class="text-2xl font-bold">services</h1>
+          <a class="mt-5">web development</a><br>
+          <a>software development</a><br>
+          <a>Digital Marketing</a><br>
+          <a>software designing</a><br>
+          <a>UI/UX design</a>
+        </div>
+        <div>
+          <h1 style="color: #359D21;" class="text-2xl font-bold">Support</h1>
+          <a class="mt-10">Contact</a><br>
+          <a>Privacy Policy</a><br>
+          <a>Terms & Conditions</a>
+        </div>
+        <div>
+          <h1  style="color: #359D21;" class="text-2xl font-bold">Get in Touch</h1>
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <i class="fa-brands fa-instagram text-2xl ml-5"></i>
+            <i class="fa-brands fa-facebook text-2xl ml-5"></i>
+        </div>
+      </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
